@@ -2,7 +2,6 @@ import * as dotenv from "dotenv";
 if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
-console.log("haha");
 
 import path from "path";
 import { fileURLToPath } from "url";
