@@ -7,6 +7,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { router as indexRouter } from "./routes/index.js";
 import { router as authorRouter } from "./routes/authors.js";
+import { router as bookRouter } from "./routes/books.js";
 import express from "express";
 import expressLayouts from "express-ejs-layouts";
 import bodyParser from "body-parser";
@@ -34,5 +35,6 @@ db.once("open", () => console.log("Connected to Mongoose"));
 
 app.use("/", indexRouter);
 app.use("/authors", authorRouter);
+app.use("/books", bookRouter);
 
 app.listen(process.env.PORT || 3000);
